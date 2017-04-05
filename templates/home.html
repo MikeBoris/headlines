@@ -2,15 +2,50 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Headlines</title>
+	  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald');
+    .dog {
+      font-size: 75px;
+      font-family: 'Oswald', sans-serif;	
+    }
+    p {
+      font-size: 19px;
+      font-family: 'Open Sans', sans-serif;
+      padding: 10px;
+    }
+    b {
+      font-size: 25px;
+      padding: 10px;
+    }
+    i {
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
-		<h1>Headlines</h1>
+
+	<h1 class="dog">Headlines</h1>
+		
 		{% for article in articles %}
+		
 		<b><a href="{{article.link}}">{{article.title}}</a></b> <br />
+		
 		<i>{{article.published}}</i> <br />
-		<p>{{article.summary}}</p> <br />
+		
+		<p>{{article.summary}}</p>
+		
 		<hr />
+		
 		{% endfor %}
+
+
+
+
+
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
