@@ -1,3 +1,8 @@
+"""
+usage: python headlines.py
+virtualenv headlines
+
+"""
 import feedparser
 from flask import Flask
 from flask import render_template
