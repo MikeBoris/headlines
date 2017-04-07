@@ -27,6 +27,13 @@
 <body>
 
 	<h1 class="dog">Headlines</h1>
+	<h2>Current Weather</h2>
+	<form action="">
+		<input type="text" name="city" placeholder="weather search">
+		<input type="submit" value="Submit">
+	</form>
+	<p>City: <b>{{weather.city}}</b></p>
+	<p>{{weather.description}} | {{weather.temperature}}&#8451;</p>
 		<form action="">
 			<input type="text" name="publication" placeholder="search">
 			<input type="submit" value="Submit">
@@ -39,6 +46,7 @@
 		<i>{{article.published}}</i> <br />
 		
 		<p>{{article.summary}}</p>
+		<p>{{article.published_parsed}}</p>
 		
 		<hr />
 		
